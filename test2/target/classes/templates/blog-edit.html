@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Редактирование статьи</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body style="background-color: beige">
+<div th:each="el : ${post}">
+    <form method="post">
+        <input type="text" th:value="${el.name}" name="name" placeholder="Введите имя">
+        <input type="text" th:value="${el.surname}" name="surname" placeholder="Введите фамилию">
+        <input type="text" th:value="${el.midlname}" name="midlname" placeholder="Введите отчество">
+        <input type="number" th:value="${el.age}" name="age" placeholder="Введите возраст">
+        <input type="text" th:value="${el.growth}" name="growth" placeholder="Введите рост">
+        <input type="text" th:value="${el.weight}" name="weight" placeholder="Введите вес">
+        <br>
+        <button type="submit">Сохранить изменения</button>
+    </form>
+</div>
+</body>
+</html>
